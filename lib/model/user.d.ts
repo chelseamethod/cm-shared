@@ -9,10 +9,11 @@ export declare enum UserKeys {
     IsOnboarding = "isOnboarding",
     JoinedMembersGroupAt = "joinedMembersGroupAt",
     LastDailyNotificationSentAt = "lastDailyNotificationSentAt",
-    LastDailyNotificationSentDay = "lastDailyNotificationSentDay",
     LastStreakActivityAt = "lastStreakActivityAt",
     LastTickAt = "lastTickAt",
     ModuleCursor = "moduleCursor",
+    NextDailyNotificationAt = "nextDailyNotificationAt",
+    NextTickAt = "nextTickAt",
     StreakCount = "streakCount",
     TelegramLinkKey = "telegramLinkKey",
     TelegramId = "telegramId",
@@ -49,9 +50,10 @@ export interface User {
     [UserKeys.Timezone]: string;
     [UserKeys.ModuleCursor]?: ModuleCursor;
     [UserKeys.JoinedMembersGroupAt]?: FirebaseFirestore.Timestamp;
-    [UserKeys.LastDailyNotificationSentDay]?: string;
     [UserKeys.LastTickAt]?: FirebaseFirestore.Timestamp;
     [UserKeys.CurrentModuleItem]?: ModuleItem;
     [UserKeys.IsActive]?: boolean;
     [UserKeys.CompletedModules]?: string[];
+    [UserKeys.NextDailyNotificationAt]?: FirebaseFirestore.Timestamp;
+    [UserKeys.NextTickAt]?: FirebaseFirestore.Timestamp;
 }
