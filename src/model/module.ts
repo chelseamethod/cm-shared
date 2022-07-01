@@ -16,6 +16,8 @@ export enum ModuleItemKeys {
   Title = 'title',
   UscreenUrl = 'uscreenUrl',
   Step = "step",
+  Post = 'post',
+  WorkoutImage = 'workoutImage',
 }
 
 export interface ModuleItem {
@@ -24,4 +26,8 @@ export interface ModuleItem {
   [ModuleItemKeys.Title]: string;
   [ModuleItemKeys.UscreenUrl]?: string;
   [ModuleItemKeys.Step]: number;
+  [ModuleItemKeys.Post]: string;
+  [ModuleItemKeys.WorkoutImage]?: {
+    thumbnails: { [key: string]: { url: string } }
+  }
 }

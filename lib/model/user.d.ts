@@ -1,9 +1,8 @@
 import * as FirebaseFirestore from "@firebase/firestore-types";
-import { ModuleItem } from "./module";
 export declare enum UserKeys {
     AllowsDailyNotification = "allowsDailyNotification",
     CompletedModules = "completedModules",
-    CurrentModuleItem = "currentModuleItem",
+    CurrentModuleItemId = "currentModuleItemId",
     DailyNotificationMinute = "dailyNotificationMinute",
     IsActive = "isActive",
     IsOnboarding = "isOnboarding",
@@ -51,7 +50,7 @@ export interface User {
     [UserKeys.ModuleCursor]?: ModuleCursor;
     [UserKeys.JoinedMembersGroupAt]?: FirebaseFirestore.Timestamp;
     [UserKeys.LastTickAt]?: FirebaseFirestore.Timestamp;
-    [UserKeys.CurrentModuleItem]?: ModuleItem;
+    [UserKeys.CurrentModuleItemId]?: string;
     [UserKeys.IsActive]?: boolean;
     [UserKeys.CompletedModules]?: string[];
     [UserKeys.NextDailyNotificationAt]?: FirebaseFirestore.Timestamp;
