@@ -2,8 +2,10 @@ import * as FirebaseFirestore from "@firebase/firestore-types";
 export declare enum UserKeys {
     AllowsDailyNotification = "allowsDailyNotification",
     CompletedModules = "completedModules",
+    CurrentDailyItemId = "currentDailyItemId",
     CurrentModuleItemId = "currentModuleItemId",
     DailyNotificationMinute = "dailyNotificationMinute",
+    Id = "id",
     IsActive = "isActive",
     IsOnboarding = "isOnboarding",
     JoinedMembersGroupAt = "joinedMembersGroupAt",
@@ -12,8 +14,8 @@ export declare enum UserKeys {
     LastTickAt = "lastTickAt",
     ModuleCursor = "moduleCursor",
     NextDailyNotificationAt = "nextDailyNotificationAt",
-    NextTickAt = "nextTickAt",
     StreakCount = "streakCount",
+    Stats = "stats",
     TelegramLinkKey = "telegramLinkKey",
     TelegramId = "telegramId",
     TelegramFirstName = "telegramFirstName",
@@ -25,13 +27,29 @@ export declare enum UserKeys {
     UscreenNickname = "uscreenNickname",
     UscreenName = "uscreenName"
 }
+export declare enum ModuleCursorKeys {
+    ModuleId = "moduleId",
+    Step = "step",
+    Timestamp = "timestamp"
+}
+export declare enum StatsKeys {
+    StreakCount = "streakCount",
+    WatchTime = "watchTime",
+    WatchCount = "watchCount"
+}
 export interface ModuleCursor {
-    moduleId: string;
-    step: number;
-    timestamp: FirebaseFirestore.Timestamp;
+    [ModuleCursorKeys.ModuleId]: string;
+    [ModuleCursorKeys.Step]: number;
+    [ModuleCursorKeys.Timestamp]: FirebaseFirestore.Timestamp;
+}
+export interface Stats {
+    [StatsKeys.StreakCount]?: number | FirebaseFirestore.FieldValue;
+    [StatsKeys.WatchTime]?: number | FirebaseFirestore.FieldValue;
+    [StatsKeys.WatchCount]?: number | FirebaseFirestore.FieldValue;
 }
 export interface User {
-    [UserKeys.StreakCount]?: number;
+    [UserKeys.Id]?: string;
+    [UserKeys.StreakCount]?: number | FirebaseFirestore.FieldValue;
     [UserKeys.LastStreakActivityAt]?: FirebaseFirestore.Timestamp;
     [UserKeys.UscreenUserId]?: string;
     [UserKeys.UscreenEmail]?: string;
@@ -46,13 +64,14 @@ export interface User {
     [UserKeys.TelegramFirstName]?: string;
     [UserKeys.TelegramLastName]?: string;
     [UserKeys.IsOnboarding]?: boolean;
-    [UserKeys.Timezone]: string;
+    [UserKeys.Timezone]?: string;
     [UserKeys.ModuleCursor]?: ModuleCursor;
     [UserKeys.JoinedMembersGroupAt]?: FirebaseFirestore.Timestamp;
     [UserKeys.LastTickAt]?: FirebaseFirestore.Timestamp;
     [UserKeys.CurrentModuleItemId]?: string;
+    [UserKeys.CurrentDailyItemId]?: string;
     [UserKeys.IsActive]?: boolean;
     [UserKeys.CompletedModules]?: string[];
     [UserKeys.NextDailyNotificationAt]?: FirebaseFirestore.Timestamp;
-    [UserKeys.NextTickAt]?: FirebaseFirestore.Timestamp;
+    [UserKeys.Stats]?: Stats;
 }

@@ -1,7 +1,10 @@
 export {
   User,
   UserKeys,
-  ModuleCursor
+  ModuleCursor,
+  ModuleCursorKeys,
+  Stats,
+  StatsKeys,
 } from './model/user';
 export {
   Activity,
@@ -13,6 +16,10 @@ export {
   ModuleItem,
   ModuleItemKeys
 } from './model/module';
+export {
+  VideoKeys,
+  Video,
+} from './model/video';
 export {
   Zone,
 } from './time';
