@@ -2,8 +2,7 @@ import * as FirebaseFirestore from "@firebase/firestore-types";
 export declare enum UserKeys {
     AllowsDailyNotification = "allowsDailyNotification",
     CompletedModules = "completedModules",
-    CurrentDailyItemId = "currentDailyItemId",
-    CurrentModuleItemId = "currentModuleItemId",
+    DailyItemId = "dailyItemId",
     DailyNotificationMinute = "dailyNotificationMinute",
     Id = "id",
     IsActive = "isActive",
@@ -12,8 +11,7 @@ export declare enum UserKeys {
     LastDailyNotificationSentAt = "lastDailyNotificationSentAt",
     LastStreakActivityAt = "lastStreakActivityAt",
     LastTickAt = "lastTickAt",
-    ModuleCursor = "moduleCursor",
-    NextDailyNotificationAt = "nextDailyNotificationAt",
+    Module = "module",
     StreakCount = "streakCount",
     Stats = "stats",
     TelegramLinkKey = "telegramLinkKey",
@@ -27,20 +25,24 @@ export declare enum UserKeys {
     UscreenNickname = "uscreenNickname",
     UscreenName = "uscreenName"
 }
-export declare enum ModuleCursorKeys {
+export declare enum UserModuleKeys {
     ModuleId = "moduleId",
+    ModuleItemId = "moduleItemId",
     Step = "step",
-    Timestamp = "timestamp"
+    Timestamp = "timestamp",
+    FurthestStep = "furthestStep"
 }
 export declare enum StatsKeys {
     StreakCount = "streakCount",
     WatchTime = "watchTime",
     WatchCount = "watchCount"
 }
-export interface ModuleCursor {
-    [ModuleCursorKeys.ModuleId]: string;
-    [ModuleCursorKeys.Step]: number;
-    [ModuleCursorKeys.Timestamp]: FirebaseFirestore.Timestamp;
+export interface UserModule {
+    [UserModuleKeys.ModuleId]: string;
+    [UserModuleKeys.ModuleItemId]: string;
+    [UserModuleKeys.Step]: number;
+    [UserModuleKeys.FurthestStep]: number;
+    [UserModuleKeys.Timestamp]: FirebaseFirestore.Timestamp;
 }
 export interface Stats {
     [StatsKeys.StreakCount]?: number | FirebaseFirestore.FieldValue;
@@ -65,13 +67,11 @@ export interface User {
     [UserKeys.TelegramLastName]?: string;
     [UserKeys.IsOnboarding]?: boolean;
     [UserKeys.Timezone]?: string;
-    [UserKeys.ModuleCursor]?: ModuleCursor;
+    [UserKeys.Module]?: UserModule;
     [UserKeys.JoinedMembersGroupAt]?: FirebaseFirestore.Timestamp;
     [UserKeys.LastTickAt]?: FirebaseFirestore.Timestamp;
-    [UserKeys.CurrentModuleItemId]?: string;
-    [UserKeys.CurrentDailyItemId]?: string;
+    [UserKeys.DailyItemId]?: string;
     [UserKeys.IsActive]?: boolean;
     [UserKeys.CompletedModules]?: string[];
-    [UserKeys.NextDailyNotificationAt]?: FirebaseFirestore.Timestamp;
     [UserKeys.Stats]?: Stats;
 }

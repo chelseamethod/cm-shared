@@ -8,6 +8,9 @@ export enum VideoKeys {
   Difficulty = 'difficulty',
   Focus = 'focus',
   Tags = 'tags',
+  Image = 'image',
+  Orientation = 'orientation',
+  CoachNote = 'coachNote',
 }
 
 export interface Video {
@@ -20,4 +23,12 @@ export interface Video {
   [VideoKeys.Difficulty]?: string;
   [VideoKeys.Focus]?: string;
   [VideoKeys.Tags]?: string[];
+  [VideoKeys.Orientation]?: string;
+  [VideoKeys.CoachNote]?: string;
+  [VideoKeys.Image]?: {
+    url: string;
+    thumbnails: { [key: string]: { url: string } }
+    width: number;
+    height: number;
+  }
 }

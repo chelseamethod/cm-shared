@@ -1,3 +1,4 @@
+import { Video } from "./video";
 export declare enum ModuleKeys {
     Id = "id",
     Name = "name",
@@ -23,7 +24,8 @@ export declare enum ModuleItemKeys {
     Title = "title",
     UscreenUrl = "uscreenUrl",
     WorkoutImage = "workoutImage",
-    Day = "day"
+    Day = "day",
+    Additional = "additional"
 }
 export interface ModuleItem {
     [ModuleItemKeys.CoachNote]?: string;
@@ -35,10 +37,12 @@ export interface ModuleItem {
     [ModuleItemKeys.Day]?: string;
     [ModuleItemKeys.Post]?: string;
     [ModuleItemKeys.WorkoutImage]?: {
+        url: string;
         thumbnails: {
             [key: string]: {
                 url: string;
             };
         };
     };
+    [ModuleItemKeys.Additional]?: Video[];
 }

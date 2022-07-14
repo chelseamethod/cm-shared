@@ -1,8 +1,8 @@
 export {
   User,
   UserKeys,
-  ModuleCursor,
-  ModuleCursorKeys,
+  UserModule,
+  UserModuleKeys,
   Stats,
   StatsKeys,
 } from './model/user';
