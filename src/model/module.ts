@@ -7,6 +7,8 @@ export enum ModuleKeys {
   Steps = 'steps',
   IsSelectable = 'isSelectable',
   Duration = 'duration',
+  ShortName = 'shortName',
+  Image = 'image',
 }
 
 export interface Module {
@@ -16,6 +18,13 @@ export interface Module {
   [ModuleKeys.Steps]: number;
   [ModuleKeys.IsSelectable]: boolean;
   [ModuleKeys.Duration]: string;
+  [ModuleKeys.ShortName]: string;
+  [ModuleKeys.Image]?: {
+    url: string;
+    thumbnails: { [key: string]: { url: string } }
+    width: number;
+    height: number;
+  },
 }
 
 export enum ModuleItemKeys {
@@ -26,9 +35,9 @@ export enum ModuleItemKeys {
   Step = "step",
   Title = 'title',
   UscreenUrl = 'uscreenUrl',
-  WorkoutImage = 'workoutImage',
   Day = 'day',
   Additional = 'additional',
+  Video = 'video',
 }
 
 export interface ModuleItem {
@@ -40,9 +49,6 @@ export interface ModuleItem {
   [ModuleItemKeys.Step]?: number;
   [ModuleItemKeys.Day]?: string;
   [ModuleItemKeys.Post]?: string;
-  [ModuleItemKeys.WorkoutImage]?: {
-    url: string;
-    thumbnails: { [key: string]: { url: string } }
-  }
   [ModuleItemKeys.Additional]?: Video[];
+  [ModuleItemKeys.Video]?: Video
 }

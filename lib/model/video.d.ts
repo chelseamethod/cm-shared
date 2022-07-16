@@ -10,7 +10,8 @@ export declare enum VideoKeys {
     Tags = "tags",
     Image = "image",
     Orientation = "orientation",
-    CoachNote = "coachNote"
+    CoachNote = "coachNote",
+    OverlayImage = "overlayImage"
 }
 export interface Video {
     [VideoKeys.Id]?: string;
@@ -26,6 +27,20 @@ export interface Video {
     [VideoKeys.CoachNote]?: string;
     [VideoKeys.Image]?: {
         url: string;
+        filename: string;
+        type: string;
+        thumbnails: {
+            [key: string]: {
+                url: string;
+            };
+        };
+        width: number;
+        height: number;
+    };
+    [VideoKeys.OverlayImage]?: {
+        url: string;
+        filename: string;
+        type: string;
         thumbnails: {
             [key: string]: {
                 url: string;
