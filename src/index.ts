@@ -27,3 +27,11 @@ export {
   TelegramUser,
   TelegramUserKeys
 } from './model/telegram';
+export {
+  ChatKeys,
+  Chat
+} from './model/chat';
+export {
+  MessageKeys,
+  Message
+} from './model/message';

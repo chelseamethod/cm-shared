@@ -14,6 +14,7 @@ export enum UserKeys {
   LastStreakActivityAt = "lastStreakActivityAt",
   LastTickAt = 'lastTickAt',
   Module = "module",
+  SmallGroupChatId = "smallGroupChatId",
   StreakCount = "streakCount",
   Stats = "stats",
   TelegramLinkKey = "telegramLinkKey",
@@ -80,5 +81,6 @@ export interface User {
   [UserKeys.DailyItemId]?: string;
   [UserKeys.IsActive]?: boolean;
   [UserKeys.CompletedModules]?: string[];
-  [UserKeys.Stats]?: Stats
+  [UserKeys.Stats]?: Stats,
+  [UserKeys.SmallGroupChatId]?: string;
 }
