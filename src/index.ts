@@ -29,7 +29,8 @@ export {
 } from './model/telegram';
 export {
   ChatKeys,
-  Chat
+  Chat,
+  ChatMemberKeys,
 } from './model/chat';
 export {
   MessageKeys,

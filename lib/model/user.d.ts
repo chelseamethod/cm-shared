@@ -1,5 +1,6 @@
 import * as FirebaseFirestore from "@firebase/firestore-types";
 export declare enum UserKeys {
+    AirtableId = "airtableId",
     AllowsDailyNotification = "allowsDailyNotification",
     CompletedModules = "completedModules",
     DailyItemId = "dailyItemId",
@@ -52,6 +53,7 @@ export interface Stats {
 }
 export interface User {
     [UserKeys.Id]?: string;
+    [UserKeys.AirtableId]?: string;
     [UserKeys.StreakCount]?: number | FirebaseFirestore.FieldValue;
     [UserKeys.LastStreakActivityAt]?: FirebaseFirestore.Timestamp;
     [UserKeys.UscreenUserId]?: string;
