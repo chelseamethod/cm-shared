@@ -7,6 +7,7 @@ export declare enum UserKeys {
     DailyNotificationMinute = "dailyNotificationMinute",
     Id = "id",
     IsActive = "isActive",
+    IsLegacy = "isLegacy",
     IsOnboarding = "isOnboarding",
     JoinedMembersGroupAt = "joinedMembersGroupAt",
     LastDailyNotificationSentAt = "lastDailyNotificationSentAt",
@@ -78,4 +79,5 @@ export interface User {
     [UserKeys.CompletedModules]?: string[];
     [UserKeys.Stats]?: Stats;
     [UserKeys.SmallGroupChatId]?: string;
+    [UserKeys.IsLegacy]?: boolean;
 }
