@@ -7,7 +7,9 @@ export declare enum ModuleKeys {
     IsSelectable = "isSelectable",
     Duration = "duration",
     ShortName = "shortName",
-    Image = "image"
+    Image = "image",
+    LongDescription = "longDescription",
+    Tagline = "tagline"
 }
 export interface Module {
     [ModuleKeys.Id]?: string;
@@ -27,6 +29,8 @@ export interface Module {
         width: number;
         height: number;
     };
+    [ModuleKeys.LongDescription]: string;
+    [ModuleKeys.Tagline]: string;
 }
 export declare enum ModuleItemKeys {
     CoachNote = "coachNote",

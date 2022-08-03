@@ -9,6 +9,8 @@ export enum ModuleKeys {
   Duration = 'duration',
   ShortName = 'shortName',
   Image = 'image',
+  LongDescription = 'longDescription',
+  Tagline = 'tagline',
 }
 
 export interface Module {
@@ -25,6 +27,8 @@ export interface Module {
     width: number;
     height: number;
   },
+  [ModuleKeys.LongDescription]: string;
+  [ModuleKeys.Tagline]: string;
 }
 
 export enum ModuleItemKeys {
