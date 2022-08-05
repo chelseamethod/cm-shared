@@ -31,8 +31,8 @@ export declare enum UserKeys {
 export declare enum UserModuleKeys {
     ModuleId = "moduleId",
     ModuleItemId = "moduleItemId",
-    StartStep = "step",
-    StartTimestamp = "timestamp",
+    StartStep = "startStep",
+    StartTimestamp = "startTimestamp",
     FurthestStep = "furthestStep"
 }
 export declare enum StatsKeys {
