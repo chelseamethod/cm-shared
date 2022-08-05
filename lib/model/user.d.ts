@@ -31,8 +31,8 @@ export declare enum UserKeys {
 export declare enum UserModuleKeys {
     ModuleId = "moduleId",
     ModuleItemId = "moduleItemId",
-    Step = "step",
-    Timestamp = "timestamp",
+    StartStep = "step",
+    StartTimestamp = "timestamp",
     FurthestStep = "furthestStep"
 }
 export declare enum StatsKeys {
@@ -43,9 +43,9 @@ export declare enum StatsKeys {
 export interface UserModule {
     [UserModuleKeys.ModuleId]: string;
     [UserModuleKeys.ModuleItemId]: string;
-    [UserModuleKeys.Step]: number;
+    [UserModuleKeys.StartStep]: number;
     [UserModuleKeys.FurthestStep]: number;
-    [UserModuleKeys.Timestamp]: FirebaseFirestore.Timestamp;
+    [UserModuleKeys.StartTimestamp]: FirebaseFirestore.Timestamp;
 }
 export interface Stats {
     [StatsKeys.StreakCount]?: number | FirebaseFirestore.FieldValue;
