@@ -10,7 +10,8 @@ export declare enum ModuleKeys {
     Image = "image",
     LongDescription = "longDescription",
     Tagline = "tagline",
-    Instructors = "instructors"
+    Instructors = "instructors",
+    WelcomeMessage = "welcomeMessage"
 }
 export interface Module {
     [ModuleKeys.Id]?: string;
@@ -20,6 +21,7 @@ export interface Module {
     [ModuleKeys.IsSelectable]: boolean;
     [ModuleKeys.Duration]: string;
     [ModuleKeys.ShortName]: string;
+    [ModuleKeys.WelcomeMessage]: string;
     [ModuleKeys.Image]?: {
         url: string;
         thumbnails: {
