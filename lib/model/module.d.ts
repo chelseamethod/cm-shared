@@ -9,7 +9,8 @@ export declare enum ModuleKeys {
     ShortName = "shortName",
     Image = "image",
     LongDescription = "longDescription",
-    Tagline = "tagline"
+    Tagline = "tagline",
+    Instructors = "instructors"
 }
 export interface Module {
     [ModuleKeys.Id]?: string;
@@ -31,6 +32,19 @@ export interface Module {
     };
     [ModuleKeys.LongDescription]: string;
     [ModuleKeys.Tagline]: string;
+    [ModuleKeys.Instructors]: {
+        name: string;
+        avatarImage?: {
+            url: string;
+            thumbnails: {
+                [key: string]: {
+                    url: string;
+                };
+            };
+            width: number;
+            height: number;
+        };
+    }[];
 }
 export declare enum ModuleItemKeys {
     CoachNote = "coachNote",
