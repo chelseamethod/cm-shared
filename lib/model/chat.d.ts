@@ -13,7 +13,7 @@ export interface Chat {
     [ChatKeys.MemberCount]: number;
     [ChatKeys.TelegramId]: string;
     [ChatKeys.Title]: string;
-    [ChatKeys.Type]: "group" | "private" | "channel";
+    [ChatKeys.Type]: "group" | "private" | "channel" | "supergroup";
     [ChatKeys.TelegramInviteLink]: string;
     [ChatKeys.LastActivityAt]: Date | string | number | FirebaseFirestore.Timestamp;
 }

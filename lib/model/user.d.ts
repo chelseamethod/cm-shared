@@ -14,7 +14,8 @@ export declare enum UserKeys {
     LastStreakActivityAt = "lastStreakActivityAt",
     LastTickAt = "lastTickAt",
     Module = "module",
-    SmallGroupChatId = "smallGroupChatId",
+    TelegramSmallGroupId = "telegramSmallGroupId",
+    TelegramSmallGroupUrl = "telegramSmallGroupUrl",
     StreakCount = "streakCount",
     Stats = "stats",
     TelegramLinkKey = "telegramLinkKey",
@@ -78,6 +79,7 @@ export interface User {
     [UserKeys.IsActive]?: boolean;
     [UserKeys.CompletedModules]?: string[];
     [UserKeys.Stats]?: Stats;
-    [UserKeys.SmallGroupChatId]?: string;
+    [UserKeys.TelegramSmallGroupId]?: string;
+    [UserKeys.TelegramSmallGroupUrl]?: string;
     [UserKeys.IsLegacy]?: boolean;
 }

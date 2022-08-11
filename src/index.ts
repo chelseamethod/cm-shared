@@ -36,3 +36,8 @@ export {
   MessageKeys,
   Message
 } from './model/message';
+export {
+  STREAK_ACTION,
+  getStreakActionOnActivity,
+  getStreakActionNow
+} from './streaks';

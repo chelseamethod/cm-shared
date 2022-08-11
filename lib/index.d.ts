@@ -6,3 +6,4 @@ export { Zone, } from './time';
 export { TelegramUser, TelegramUserKeys } from './model/telegram';
 export { ChatKeys, Chat, ChatMemberKeys, } from './model/chat';
 export { MessageKeys, Message } from './model/message';
+export { STREAK_ACTION, getStreakActionOnActivity, getStreakActionNow } from './streaks';
