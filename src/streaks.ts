@@ -25,9 +25,8 @@ export const getStreakActionNow = function (now: number, lastTime: number, zone:
   const nowDateTime = DateTime.fromMillis(now).setZone(zone).minus({ hours: rolloverHour });
   const lastStreakActivityAtDateTime = DateTime.fromMillis(lastTime).setZone(zone).minus({ hours: rolloverHour });
 
-  if (nowDateTime.hasSame(lastStreakActivityAtDateTime, 'day')) {
-    return STREAK_ACTION.NOOP;
-  } else if (nowDateTime.diff(lastStreakActivityAtDateTime, 'days').days >= 1) {
+  if (!lastStreakActivityAtDateTime.hasSame(nowDateTime, 'day') &&
+    !lastStreakActivityAtDateTime.plus({ days: 1 }).hasSame(nowDateTime, 'day')) {
     return STREAK_ACTION.RESET;
   } else {
     return STREAK_ACTION.NOOP;
