@@ -7,8 +7,6 @@ export declare enum UserKeys {
     DailyNotificationMinute = "dailyNotificationMinute",
     Id = "id",
     IsActive = "isActive",
-    IsLegacy = "isLegacy",
-    IsOnboarding = "isOnboarding",
     JoinedMembersGroupAt = "joinedMembersGroupAt",
     LastDailyNotificationSentAt = "lastDailyNotificationSentAt",
     LastStreakActivityAt = "lastStreakActivityAt",
@@ -70,7 +68,6 @@ export interface User {
     [UserKeys.TelegramId]?: string;
     [UserKeys.TelegramFirstName]?: string;
     [UserKeys.TelegramLastName]?: string;
-    [UserKeys.IsOnboarding]?: boolean;
     [UserKeys.Timezone]?: string;
     [UserKeys.Module]?: UserModule;
     [UserKeys.JoinedMembersGroupAt]?: FirebaseFirestore.Timestamp;
@@ -81,5 +78,4 @@ export interface User {
     [UserKeys.Stats]?: Stats;
     [UserKeys.TelegramSmallGroupId]?: string;
     [UserKeys.TelegramSmallGroupUrl]?: string;
-    [UserKeys.IsLegacy]?: boolean;
 }
