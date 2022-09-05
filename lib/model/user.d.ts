@@ -12,6 +12,7 @@ export declare enum UserKeys {
     LastStreakActivityAt = "lastStreakActivityAt",
     LastTickAt = "lastTickAt",
     Module = "module",
+    Phone = "phone",
     TelegramSmallGroupId = "telegramSmallGroupId",
     TelegramSmallGroupUrl = "telegramSmallGroupUrl",
     StreakCount = "streakCount",
@@ -78,4 +79,5 @@ export interface User {
     [UserKeys.Stats]?: Stats;
     [UserKeys.TelegramSmallGroupId]?: string;
     [UserKeys.TelegramSmallGroupUrl]?: string;
+    [UserKeys.Phone]?: string;
 }
