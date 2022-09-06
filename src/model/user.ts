@@ -15,14 +15,15 @@ export enum UserKeys {
   LastTickAt = 'lastTickAt',
   Module = "module",
   Phone = 'phone',
-  TelegramSmallGroupId = "telegramSmallGroupId",
-  TelegramSmallGroupUrl = "telegramSmallGroupUrl",
+  RegisteredForSquadAt = 'registeredForSquadAt',
   StreakCount = "streakCount",
   Stats = "stats",
-  TelegramLinkKey = "telegramLinkKey",
-  TelegramId = "telegramId",
   TelegramFirstName = "telegramFirstName",
+  TelegramId = "telegramId",
   TelegramLastName = "telegramLastName",
+  TelegramLinkKey = "telegramLinkKey",
+  TelegramSmallGroupId = "telegramSmallGroupId",
+  TelegramSmallGroupUrl = "telegramSmallGroupUrl",
   Timezone = "timezone",
   UscreenUserId = "uscreenUserId",
   UscreenCountry = "uscreenCountry",
@@ -87,4 +88,5 @@ export interface User {
   [UserKeys.TelegramSmallGroupId]?: string;
   [UserKeys.TelegramSmallGroupUrl]?: string;
   [UserKeys.Phone]?: string;
+  [UserKeys.RegisteredForSquadAt]?: FirebaseFirestore.Timestamp;
 }
