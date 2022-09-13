@@ -17,7 +17,7 @@ export enum UserKeys {
   Phone = 'phone',
   RegisteredForSquadAt = 'registeredForSquadAt',
   StreakCount = "streakCount",
-  StartDate = "startDate",
+  StartAt = "startAt",
   Stats = "stats",
   TelegramFirstName = "telegramFirstName",
   TelegramId = "telegramId",
@@ -90,5 +90,5 @@ export interface User {
   [UserKeys.TelegramSmallGroupUrl]?: string;
   [UserKeys.Phone]?: string;
   [UserKeys.RegisteredForSquadAt]?: FirebaseFirestore.Timestamp;
-  [UserKeys.StartDate]?: FirebaseFirestore.Timestamp;
+  [UserKeys.StartAt]?: FirebaseFirestore.Timestamp;
 }
