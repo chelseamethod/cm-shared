@@ -5,6 +5,7 @@ export enum UserKeys {
   AirtableId = "airtableId",
   AllowsDailyNotification = "allowsDailyNotification",
   CompletedModules = "completedModules",
+  CreatedAt = "createdAt",
   DailyItemId = "dailyItemId",
   DailyNotificationMinute = "dailyNotificationMinute",
   Id = "id",
@@ -91,4 +92,5 @@ export interface User {
   [UserKeys.Phone]?: string;
   [UserKeys.RegisteredForSquadAt]?: FirebaseFirestore.Timestamp;
   [UserKeys.StartAt]?: FirebaseFirestore.Timestamp;
+  [UserKeys.CreatedAt]?: FirebaseFirestore.Timestamp;
 }
