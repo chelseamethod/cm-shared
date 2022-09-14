@@ -25,10 +25,10 @@ export const getStreakActionNow = function (now: number, lastTime: number, zone:
   const nowDateTime = DateTime.fromMillis(now).setZone(zone).minus({ hours: rolloverHour });
   const lastStreakActivityAtDateTime = DateTime.fromMillis(lastTime).setZone(zone).minus({ hours: rolloverHour });
 
-  console.log('now: ', nowDateTime.toISO(), 'last activity ', lastStreakActivityAtDateTime.toISO());
-  console.log('is same day as last activity', lastStreakActivityAtDateTime.hasSame(nowDateTime, 'day'));
-  console.log('is next day from last activity', lastStreakActivityAtDateTime.plus({ days: 1 }).hasSame(nowDateTime, 'day'));
-  console.log(!lastStreakActivityAtDateTime.hasSame(nowDateTime, 'day') && !lastStreakActivityAtDateTime.plus({ days: 1 }).hasSame(nowDateTime, 'day'));
+  // console.log('now: ', nowDateTime.toISO(), 'last activity ', lastStreakActivityAtDateTime.toISO());
+  // console.log('is same day as last activity', lastStreakActivityAtDateTime.hasSame(nowDateTime, 'day'));
+  // console.log('is next day from last activity', lastStreakActivityAtDateTime.plus({ days: 1 }).hasSame(nowDateTime, 'day'));
+  // console.log(!lastStreakActivityAtDateTime.hasSame(nowDateTime, 'day') && !lastStreakActivityAtDateTime.plus({ days: 1 }).hasSame(nowDateTime, 'day'));
 
   if (!lastStreakActivityAtDateTime.hasSame(nowDateTime, 'day') &&
     !lastStreakActivityAtDateTime.plus({ days: 1 }).hasSame(nowDateTime, 'day')) {

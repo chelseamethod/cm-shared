@@ -16,6 +16,7 @@ export enum UserKeys {
   LastTickAt = 'lastTickAt',
   Module = "module",
   Phone = 'phone',
+  ReferralCode = "referralCode",
   RegisteredForSquadAt = 'registeredForSquadAt',
   StreakCount = "streakCount",
   StartAt = "startAt",
@@ -93,4 +94,5 @@ export interface User {
   [UserKeys.RegisteredForSquadAt]?: FirebaseFirestore.Timestamp;
   [UserKeys.StartAt]?: FirebaseFirestore.Timestamp;
   [UserKeys.CreatedAt]?: FirebaseFirestore.Timestamp;
+  [UserKeys.ReferralCode]?: string;
 }
