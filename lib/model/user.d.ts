@@ -9,7 +9,6 @@ export declare enum UserKeys {
     Id = "id",
     IsActive = "isActive",
     JoinedMembersGroupAt = "joinedMembersGroupAt",
-    LastDailyNotificationSentAt = "lastDailyNotificationSentAt",
     LastStreakActivityAt = "lastStreakActivityAt",
     LastTickAt = "lastTickAt",
     Module = "module",
@@ -68,7 +67,6 @@ export interface User {
     [UserKeys.UscreenCountry]?: string;
     [UserKeys.AllowsDailyNotification]?: boolean;
     [UserKeys.DailyNotificationMinute]?: number;
-    [UserKeys.LastDailyNotificationSentAt]?: FirebaseFirestore.Timestamp;
     [UserKeys.TelegramLinkKey]?: string;
     [UserKeys.TelegramId]?: string;
     [UserKeys.TelegramFirstName]?: string;
