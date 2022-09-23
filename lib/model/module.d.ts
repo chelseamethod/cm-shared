@@ -1,3 +1,4 @@
+import * as FirebaseFirestore from "@firebase/firestore-types";
 import { Video } from "./video";
 export declare enum ModuleKeys {
     Id = "id",
@@ -11,7 +12,8 @@ export declare enum ModuleKeys {
     LongDescription = "longDescription",
     Tagline = "tagline",
     Instructors = "instructors",
-    WelcomeMessage = "welcomeMessage"
+    WelcomeMessage = "welcomeMessage",
+    NextKickoffDate = "nextKickoffDate"
 }
 export interface Module {
     [ModuleKeys.Id]?: string;
@@ -47,6 +49,7 @@ export interface Module {
             height: number;
         };
     }[];
+    [ModuleKeys.NextKickoffDate]: FirebaseFirestore.Timestamp;
 }
 export declare enum ModuleItemKeys {
     CoachNote = "coachNote",

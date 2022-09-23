@@ -45,11 +45,11 @@ export declare enum StatsKeys {
     WatchCount = "watchCount"
 }
 export interface UserModule {
-    [UserModuleKeys.ModuleId]: string;
-    [UserModuleKeys.ModuleItemId]: string;
-    [UserModuleKeys.StartStep]: number;
-    [UserModuleKeys.FurthestStep]: number;
-    [UserModuleKeys.StartTimestamp]: FirebaseFirestore.Timestamp;
+    [UserModuleKeys.ModuleId]?: string;
+    [UserModuleKeys.ModuleItemId]?: string;
+    [UserModuleKeys.StartStep]?: number;
+    [UserModuleKeys.FurthestStep]?: number;
+    [UserModuleKeys.StartTimestamp]?: FirebaseFirestore.Timestamp;
 }
 export interface Stats {
     [StatsKeys.StreakCount]?: number | FirebaseFirestore.FieldValue;

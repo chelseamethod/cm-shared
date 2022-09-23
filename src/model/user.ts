@@ -50,11 +50,11 @@ export enum StatsKeys {
 }
 
 export interface UserModule {
-  [UserModuleKeys.ModuleId]: string;
-  [UserModuleKeys.ModuleItemId]: string;
-  [UserModuleKeys.StartStep]: number;
-  [UserModuleKeys.FurthestStep]: number;
-  [UserModuleKeys.StartTimestamp]: FirebaseFirestore.Timestamp;
+  [UserModuleKeys.ModuleId]?: string;
+  [UserModuleKeys.ModuleItemId]?: string;
+  [UserModuleKeys.StartStep]?: number;
+  [UserModuleKeys.FurthestStep]?: number;
+  [UserModuleKeys.StartTimestamp]?: FirebaseFirestore.Timestamp;
 }
 
 export interface Stats {
