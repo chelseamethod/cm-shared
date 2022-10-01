@@ -7,3 +7,4 @@ export { TelegramUser, TelegramUserKeys } from './model/telegram';
 export { ChatKeys, Chat, ChatMemberKeys, } from './model/chat';
 export { MessageKeys, Message } from './model/message';
 export { STREAK_ACTION, getStreakActionOnActivity, getStreakActionNow } from './streaks';
+export { MilestoneKeys, Milestone } from './model/milestone';

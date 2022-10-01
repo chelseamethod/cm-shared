@@ -41,3 +41,7 @@ export {
   getStreakActionOnActivity,
   getStreakActionNow
 } from './streaks';
+export {
+  MilestoneKeys,
+  Milestone
+} from './model/milestone';
