@@ -12,10 +12,10 @@ export enum MilestoneKeys {
 
 export interface Milestone {
   [MilestoneKeys.Id]?: string;
-  [MilestoneKeys.AchievedAt]: FirebaseFirestore.Timestamp;
-  [MilestoneKeys.Category]: string;
+  [MilestoneKeys.AchievedAt]?: FirebaseFirestore.Timestamp;
+  [MilestoneKeys.Category]?: string;
   [MilestoneKeys.Name]: string;
-  [MilestoneKeys.Description]: string;
-  [MilestoneKeys.ImageUrl]: string;
-  [MilestoneKeys.VideoUrl]: string;
+  [MilestoneKeys.Description]?: string;
+  [MilestoneKeys.ImageUrl]?: string;
+  [MilestoneKeys.VideoUrl]?: string;
 }
