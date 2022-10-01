@@ -1,6 +1,7 @@
 import *  as FirebaseFirestore from '@firebase/firestore-types';
 
 export enum MilestoneKeys {
+  Id = 'id',
   AchievedAt = 'achievedAt',
   Category = 'category',
   Name = 'name',
@@ -10,6 +11,7 @@ export enum MilestoneKeys {
 }
 
 export interface Milestone {
+  [MilestoneKeys.Id]?: string;
   [MilestoneKeys.AchievedAt]: FirebaseFirestore.Timestamp;
   [MilestoneKeys.Category]: string;
   [MilestoneKeys.Name]: string;
