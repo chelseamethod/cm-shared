@@ -8,10 +8,10 @@ export enum MilestoneKeys {
   Name = 'name',
   Description = 'description',
   DescriptionAchieved = 'descriptionAchieved',
-  Image = 'imageUrl',
-  ImageAchieved = 'imageAchievedUrl',
-  Video = 'videoUrl',
-  ShareVideo = 'shareVideoUrl',
+  Image = 'image',
+  ImageAchieved = 'imageAchieved',
+  Video = 'video',
+  ShareVideo = 'shareVideo',
 }
 
 export interface Milestone {
