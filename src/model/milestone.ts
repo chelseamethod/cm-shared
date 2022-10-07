@@ -8,10 +8,10 @@ export enum MilestoneKeys {
   Name = 'name',
   Description = 'description',
   DescriptionAchieved = 'descriptionAchieved',
-  ImageUrl = 'imageUrl',
-  ImageAchievedUrl = 'imageAchievedUrl',
-  VideoUrl = 'videoUrl',
-  ShareVideoUrl = 'shareVideoUrl',
+  Image = 'imageUrl',
+  ImageAchieved = 'imageAchievedUrl',
+  Video = 'videoUrl',
+  ShareVideo = 'shareVideoUrl',
 }
 
 export interface Milestone {
@@ -22,8 +22,28 @@ export interface Milestone {
   [MilestoneKeys.Name]: string;
   [MilestoneKeys.Description]?: string;
   [MilestoneKeys.DescriptionAchieved]?: string;
-  [MilestoneKeys.ImageUrl]?: string;
-  [MilestoneKeys.ImageAchievedUrl]?: string;
-  [MilestoneKeys.VideoUrl]?: string;
-  [MilestoneKeys.ShareVideoUrl]?: string;
+  [MilestoneKeys.Image]?: {
+    url: string;
+    thumbnails: { [key: string]: { url: string } }
+    width: number;
+    height: number;
+  };
+  [MilestoneKeys.ImageAchieved]?: {
+    url: string;
+    thumbnails: { [key: string]: { url: string } }
+    width: number;
+    height: number;
+  };
+  [MilestoneKeys.Video]?: {
+    url: string;
+    filename: string;
+    type: string;
+    size: number;
+  };
+  [MilestoneKeys.ShareVideo]?: {
+    url: string;
+    filename: string;
+    type: string;
+    size: number;
+  };
 }
