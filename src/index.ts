@@ -43,5 +43,6 @@ export {
 } from './streaks';
 export {
   MilestoneKeys,
-  Milestone
+  Milestone,
+  MilestoneCategory,
 } from './model/milestone';
