@@ -47,3 +47,9 @@ export interface Milestone {
     size: number;
   };
 }
+
+export enum MilestoneCategory {
+  WorkoutCount = 'Workout Count',
+  Streaks = 'Streaks',
+  ChallengeFoundations = 'Foundations Challenge',
+}
