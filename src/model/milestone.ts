@@ -12,6 +12,7 @@ export enum MilestoneKeys {
   ImageAchieved = 'imageAchieved',
   Video = 'video',
   ShareVideo = 'shareVideo',
+  AnimatedImage = "animatedImage",
 }
 
 export interface Milestone {
@@ -45,6 +46,14 @@ export interface Milestone {
     filename: string;
     type: string;
     size: number;
+  };
+  [MilestoneKeys.AnimatedImage]?: {
+    url: string;
+    filename: string;
+    size: number;
+    type: string;
+    width: number;
+    height: number;
   };
 }
 
