@@ -49,4 +49,5 @@ export {
 export {
   AppKeys,
   AppState,
+  TelegramState,
 } from './model/appState';
