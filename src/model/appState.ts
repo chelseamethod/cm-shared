@@ -6,7 +6,7 @@ export enum AppKeys {
 }
 
 export interface TelegramState {
-  seenOnboarding20221026: boolean;
+  seenOnboarding20221026?: boolean;
 }
 
 export interface AppState {
