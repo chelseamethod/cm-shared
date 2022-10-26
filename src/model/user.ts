@@ -4,6 +4,7 @@ import { ModuleItem } from "./module";
 export enum UserKeys {
   AirtableId = "airtableId",
   AllowsDailyNotification = "allowsDailyNotification",
+  AppState = "appState",
   CompletedModules = "completedModules",
   CreatedAt = "createdAt",
   DailyItemId = "dailyItemId",
@@ -91,4 +92,5 @@ export interface User {
   [UserKeys.StartAt]?: FirebaseFirestore.Timestamp;
   [UserKeys.CreatedAt]?: FirebaseFirestore.Timestamp;
   [UserKeys.ReferralCode]?: string;
+  [UserKeys.AppState]?: string[];
 }
