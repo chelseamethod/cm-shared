@@ -8,4 +8,4 @@ export { ChatKeys, Chat, ChatMemberKeys, } from './model/chat';
 export { MessageKeys, Message } from './model/message';
 export { STREAK_ACTION, getStreakActionOnActivity, getStreakActionNow } from './streaks';
 export { MilestoneKeys, Milestone, MilestoneCategory, } from './model/milestone';
-export { AppKeys, AppState, } from './model/appState';
+export { AppKeys, AppState, TelegramState, } from './model/appState';
