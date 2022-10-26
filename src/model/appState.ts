@@ -1,0 +1,14 @@
+import *  as FirebaseFirestore from '@firebase/firestore-types';
+import { Video } from './video';
+
+export enum AppKeys {
+  Telegram = 'telegram',
+}
+
+export interface TelegramState {
+  seenOnboarding20221026: boolean;
+}
+
+export interface AppState {
+  [AppKeys.Telegram]: TelegramState;
+}

@@ -1,4 +1,5 @@
 import * as FirebaseFirestore from "@firebase/firestore-types";
+import { AppState } from "./appState";
 import { ModuleItem } from "./module";
 
 export enum UserKeys {
@@ -92,5 +93,5 @@ export interface User {
   [UserKeys.StartAt]?: FirebaseFirestore.Timestamp;
   [UserKeys.CreatedAt]?: FirebaseFirestore.Timestamp;
   [UserKeys.ReferralCode]?: string;
-  [UserKeys.AppState]?: string[];
+  [UserKeys.AppState]?: AppState;
 }

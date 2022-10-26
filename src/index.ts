@@ -46,3 +46,7 @@ export {
   Milestone,
   MilestoneCategory,
 } from './model/milestone';
+export {
+  AppKeys,
+  AppState,
+} from './model/appState';
