@@ -11,7 +11,8 @@ export declare enum VideoKeys {
     Image = "image",
     Orientation = "orientation",
     CoachNote = "coachNote",
-    OverlayImage = "overlayImage"
+    OverlayImage = "overlayImage",
+    ModuleItems = "moduleItems"
 }
 export interface Video {
     [VideoKeys.Id]?: string;
@@ -25,6 +26,10 @@ export interface Video {
     [VideoKeys.Tags]?: string[];
     [VideoKeys.Orientation]?: string;
     [VideoKeys.CoachNote]?: string;
+    [VideoKeys.ModuleItems]?: {
+        moduleId: string;
+        moduleItemId: string;
+    }[];
     [VideoKeys.Image]?: {
         url: string;
         filename: string;

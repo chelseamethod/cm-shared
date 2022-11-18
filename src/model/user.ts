@@ -84,7 +84,6 @@ export interface User {
   [UserKeys.LastTickAt]?: FirebaseFirestore.Timestamp;
   [UserKeys.DailyItemId]?: string;
   [UserKeys.IsActive]?: boolean;
-  [UserKeys.CompletedModules]?: string[];
   [UserKeys.Stats]?: Stats,
   [UserKeys.TelegramSmallGroupId]?: string;
   [UserKeys.TelegramSmallGroupUrl]?: string;

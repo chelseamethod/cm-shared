@@ -1,17 +1,18 @@
 export enum VideoKeys {
-  Id = 'id',
-  Name = 'name',
-  Description = 'description',
-  UscreenId = 'uscreenId',
-  UscreenUrl = 'uscreenUrl',
-  Duration = 'duration',
-  Difficulty = 'difficulty',
-  Focus = 'focus',
-  Tags = 'tags',
-  Image = 'image',
-  Orientation = 'orientation',
-  CoachNote = 'coachNote',
-  OverlayImage = 'overlayImage',
+  Id = "id",
+  Name = "name",
+  Description = "description",
+  UscreenId = "uscreenId",
+  UscreenUrl = "uscreenUrl",
+  Duration = "duration",
+  Difficulty = "difficulty",
+  Focus = "focus",
+  Tags = "tags",
+  Image = "image",
+  Orientation = "orientation",
+  CoachNote = "coachNote",
+  OverlayImage = "overlayImage",
+  ModuleItems = "moduleItems",
 }
 
 export interface Video {
@@ -26,20 +27,21 @@ export interface Video {
   [VideoKeys.Tags]?: string[];
   [VideoKeys.Orientation]?: string;
   [VideoKeys.CoachNote]?: string;
+  [VideoKeys.ModuleItems]?: { moduleId: string; moduleItemId: string }[];
   [VideoKeys.Image]?: {
     url: string;
     filename: string;
     type: string;
-    thumbnails: { [key: string]: { url: string } }
+    thumbnails: { [key: string]: { url: string } };
     width: number;
     height: number;
-  },
+  };
   [VideoKeys.OverlayImage]?: {
     url: string;
     filename: string;
     type: string;
-    thumbnails: { [key: string]: { url: string } }
+    thumbnails: { [key: string]: { url: string } };
     width: number;
     height: number;
-  }
+  };
 }
