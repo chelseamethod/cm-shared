@@ -15,6 +15,7 @@ export enum ModuleKeys {
   Instructors = 'instructors',
   WelcomeMessage = 'welcomeMessage',
   NextKickoffDate = 'nextKickoffDate',
+  LastStepId = 'lastStepId',
 }
 
 export interface Module {
@@ -44,6 +45,7 @@ export interface Module {
     }
   }[];
   [ModuleKeys.NextKickoffDate]: FirebaseFirestore.Timestamp;
+  [ModuleKeys.LastStepId]?: string;
 }
 
 export enum ModuleItemKeys {
@@ -57,6 +59,7 @@ export enum ModuleItemKeys {
   Day = 'day',
   Additional = 'additional',
   Video = 'video',
+  IsLastStep = 'isLastStep',
 }
 
 export interface ModuleItem {
@@ -70,4 +73,5 @@ export interface ModuleItem {
   [ModuleItemKeys.Post]?: string;
   [ModuleItemKeys.Additional]?: Video[];
   [ModuleItemKeys.Video]?: Video
+  [ModuleItemKeys.IsLastStep]?: boolean;
 }
