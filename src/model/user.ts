@@ -16,6 +16,7 @@ export enum UserKeys {
   LastStreakActivityAt = "lastStreakActivityAt",
   LastTickAt = 'lastTickAt',
   Module = "module",
+  Modules = 'modules',
   Phone = 'phone',
   ReferralCode = "referralCode",
   RegisteredForSquadAt = 'registeredForSquadAt',
@@ -37,6 +38,8 @@ export enum UserKeys {
 }
 
 export enum UserModuleKeys {
+  LastCompletedStep = "lastCompletedStep",
+  LastCompletedTimestamp = "lastCompletedTimestamp",
   ModuleId = "moduleId",
   ModuleItemId = 'moduleItemId',
   StartStep = "startStep",
@@ -52,8 +55,18 @@ export enum StatsKeys {
 export interface UserModule {
   [UserModuleKeys.ModuleId]?: string;
   [UserModuleKeys.ModuleItemId]?: string;
+  [UserModuleKeys.LastCompletedStep]?: number;
+  [UserModuleKeys.LastCompletedTimestamp]?: FirebaseFirestore.Timestamp;
   [UserModuleKeys.StartStep]?: number;
   [UserModuleKeys.StartTimestamp]?: FirebaseFirestore.Timestamp;
+}
+
+export enum UserModulesKeys {
+  CompletedItemIds = 'completedItemIds'
+}
+
+export interface UserModules {
+  [UserModulesKeys.CompletedItemIds]?: string[]
 }
 
 export interface Stats {

@@ -1,4 +1,4 @@
-export { User, UserKeys, UserModule, UserModuleKeys, Stats, StatsKeys, } from './model/user';
+export { User, UserKeys, UserModule, UserModuleKeys, Stats, StatsKeys, UserModules, UserModulesKeys, } from './model/user';
 export { Activity, ActivityKeys } from './model/activity';
 export { Module, ModuleKeys, ModuleItem, ModuleItemKeys } from './model/module';
 export { VideoKeys, Video, } from './model/video';
