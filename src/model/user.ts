@@ -62,11 +62,14 @@ export interface UserModule {
 }
 
 export enum UserModulesKeys {
-  CompletedItemIds = 'completedItemIds'
+  CompletedItems = 'completedItems'
 }
 
 export interface UserModules {
-  [UserModulesKeys.CompletedItemIds]?: string[]
+  [UserModulesKeys.CompletedItems]?: { [moduleItemId: string]: {
+    step?: string,
+    day?: string
+  }}[]
 }
 
 export interface Stats {

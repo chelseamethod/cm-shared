@@ -56,10 +56,15 @@ export interface UserModule {
     [UserModuleKeys.StartTimestamp]?: FirebaseFirestore.Timestamp;
 }
 export declare enum UserModulesKeys {
-    CompletedItemIds = "completedItemIds"
+    CompletedItems = "completedItems"
 }
 export interface UserModules {
-    [UserModulesKeys.CompletedItemIds]?: string[];
+    [UserModulesKeys.CompletedItems]?: {
+        [moduleItemId: string]: {
+            step?: string;
+            day?: string;
+        };
+    }[];
 }
 export interface Stats {
     [StatsKeys.StreakCount]?: number | FirebaseFirestore.FieldValue;
