@@ -61,7 +61,7 @@ export declare enum UserModulesKeys {
 export interface UserModules {
     [UserModulesKeys.CompletedItems]?: {
         [moduleItemId: string]: {
-            step?: string;
+            step?: number;
             day?: string;
         };
     }[];
