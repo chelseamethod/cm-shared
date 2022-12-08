@@ -66,10 +66,11 @@ export enum UserModuleHistoryKeys {
 }
 
 export interface UserModuleHistory {
-  [UserModuleHistoryKeys.CompletedItems]?: { [moduleItemId: string]: {
+  [UserModuleHistoryKeys.CompletedItems]?: {
+    moduleItemId: string,
     step?: number,
     day?: string
-  }}[]
+  }[]
 }
 
 export interface Stats {
