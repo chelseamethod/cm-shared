@@ -69,7 +69,8 @@ export interface UserModuleHistory {
   [UserModuleHistoryKeys.CompletedItems]?: {
     moduleItemId: string,
     step?: number,
-    day?: string
+    day?: string,
+    completedAt: FirebaseFirestore.Timestamp,
   }[]
 }
 

@@ -63,6 +63,7 @@ export interface UserModuleHistory {
         moduleItemId: string;
         step?: number;
         day?: string;
+        completedAt: FirebaseFirestore.Timestamp;
     }[];
 }
 export interface Stats {
