@@ -5,8 +5,8 @@ export {
   UserModuleKeys,
   Stats,
   StatsKeys,
-  UserModules,
-  UserModulesKeys,
+  UserModuleHistory,
+  UserModuleHistoryKeys,
 } from './model/user';
 export {
   Activity,
