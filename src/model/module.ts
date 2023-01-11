@@ -60,6 +60,7 @@ export enum ModuleItemKeys {
   Additional = 'additional',
   Video = 'video',
   IsLastStep = 'isLastStep',
+  ModuleShortName = 'moduleShortName',
 }
 
 export interface ModuleItem {
@@ -74,4 +75,5 @@ export interface ModuleItem {
   [ModuleItemKeys.Additional]?: Video[];
   [ModuleItemKeys.Video]?: Video
   [ModuleItemKeys.IsLastStep]?: boolean;
+  [ModuleItemKeys.ModuleShortName]?: string;
 }

@@ -64,7 +64,8 @@ export declare enum ModuleItemKeys {
     Day = "day",
     Additional = "additional",
     Video = "video",
-    IsLastStep = "isLastStep"
+    IsLastStep = "isLastStep",
+    ModuleShortName = "moduleShortName"
 }
 export interface ModuleItem {
     [ModuleItemKeys.CoachNote]?: string;
@@ -78,4 +79,5 @@ export interface ModuleItem {
     [ModuleItemKeys.Additional]?: Video[];
     [ModuleItemKeys.Video]?: Video;
     [ModuleItemKeys.IsLastStep]?: boolean;
+    [ModuleItemKeys.ModuleShortName]?: string;
 }
