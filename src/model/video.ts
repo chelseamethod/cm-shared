@@ -13,6 +13,7 @@ export enum VideoKeys {
   CoachNote = "coachNote",
   OverlayImage = "overlayImage",
   ModuleItems = "moduleItems",
+  MuxKey = "muxKey",
 }
 
 export interface Video {
@@ -27,6 +28,7 @@ export interface Video {
   [VideoKeys.Tags]?: string[];
   [VideoKeys.Orientation]?: string;
   [VideoKeys.CoachNote]?: string;
+  [VideoKeys.MuxKey]?: string;
   [VideoKeys.ModuleItems]?: { moduleId: string; moduleItemId: string }[];
   [VideoKeys.Image]?: {
     url: string;
