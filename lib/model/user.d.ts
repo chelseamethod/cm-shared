@@ -28,6 +28,7 @@ export declare enum UserKeys {
     TelegramSmallGroupId = "telegramSmallGroupId",
     TelegramSmallGroupUrl = "telegramSmallGroupUrl",
     Timezone = "timezone",
+    Uid = "uid",
     UscreenUserId = "uscreenUserId",
     UscreenCountry = "uscreenCountry",
     UscreenEmail = "uscreenEmail",
@@ -102,4 +103,5 @@ export interface User {
     [UserKeys.CreatedAt]?: FirebaseFirestore.Timestamp;
     [UserKeys.ReferralCode]?: string;
     [UserKeys.AppState]?: AppState;
+    [UserKeys.Uid]?: string;
 }
