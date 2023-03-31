@@ -11,6 +11,7 @@ export declare enum UserKeys {
     Id = "id",
     IsActive = "isActive",
     JoinedMembersGroupAt = "joinedMembersGroupAt",
+    LastDailyNotification = "lastDailyNotification",
     LastStreakActivityAt = "lastStreakActivityAt",
     LastTickAt = "lastTickAt",
     Module = "module",
@@ -104,4 +105,9 @@ export interface User {
     [UserKeys.ReferralCode]?: string;
     [UserKeys.AppState]?: AppState;
     [UserKeys.Uid]?: string;
+    [UserKeys.LastDailyNotification]?: {
+        moduleId: string;
+        moduleItemId: string;
+        firstSentAt: FirebaseFirestore.Timestamp;
+    };
 }
