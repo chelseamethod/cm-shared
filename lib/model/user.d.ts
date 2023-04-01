@@ -73,6 +73,27 @@ export interface Stats {
     [StatsKeys.WatchTime]?: number | FirebaseFirestore.FieldValue;
     [StatsKeys.WatchCount]?: number | FirebaseFirestore.FieldValue;
 }
+export declare enum TouchpointIds {
+    TouchpointDripWorkoutReminderWorkflow20230104 = "TouchpointDripWorkoutReminderWorkflow20230104",
+    OnboardingModal20221026 = "OnboardingModal20221026"
+}
+export declare enum TouchpointChannels {
+    Email = "email",
+    TelegramApp = "telegramApp"
+}
+export interface Touchpoint {
+    id: TouchpointIds;
+    channel: TouchpointChannels;
+    createdAt: FirebaseFirestore.Timestamp;
+}
+export interface TouchpointOnboardingModal20221026 extends Touchpoint {
+    id: TouchpointIds.OnboardingModal20221026;
+    channel: TouchpointChannels.Email;
+}
+export interface TouchpointDripWorkoutReminderWorkflow20230104 extends Touchpoint {
+    id: TouchpointIds.TouchpointDripWorkoutReminderWorkflow20230104;
+    channel: TouchpointChannels.TelegramApp;
+}
 export interface User {
     [UserKeys.Id]?: string;
     [UserKeys.AirtableId]?: string;

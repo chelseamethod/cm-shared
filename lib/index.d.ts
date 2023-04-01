@@ -1,4 +1,4 @@
-export { User, UserKeys, UserModule, UserModuleKeys, Stats, StatsKeys, UserModuleHistory, UserModuleHistoryKeys, } from './model/user';
+export { User, UserKeys, UserModule, UserModuleKeys, Stats, StatsKeys, UserModuleHistory, UserModuleHistoryKeys, Touchpoint, TouchpointOnboardingModal20221026, TouchpointDripWorkoutReminderWorkflow20230104, } from './model/user';
 export { Activity, ActivityKeys } from './model/activity';
 export { Module, ModuleKeys, ModuleItem, ModuleItemKeys } from './model/module';
 export { VideoKeys, Video, } from './model/video';

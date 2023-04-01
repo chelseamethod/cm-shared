@@ -7,6 +7,9 @@ export {
   StatsKeys,
   UserModuleHistory,
   UserModuleHistoryKeys,
+  Touchpoint,
+  TouchpointOnboardingModal20221026,
+  TouchpointDripWorkoutReminderWorkflow20230104,
 } from './model/user';
 export {
   Activity,
