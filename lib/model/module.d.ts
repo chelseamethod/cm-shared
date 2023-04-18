@@ -14,7 +14,8 @@ export declare enum ModuleKeys {
     Instructors = "instructors",
     WelcomeMessage = "welcomeMessage",
     NextKickoffDate = "nextKickoffDate",
-    LastStepId = "lastStepId"
+    LastStepId = "lastStepId",
+    ItemIds = "itemIds"
 }
 export interface Module {
     [ModuleKeys.Id]?: string;
@@ -52,6 +53,7 @@ export interface Module {
     }[];
     [ModuleKeys.NextKickoffDate]: FirebaseFirestore.Timestamp;
     [ModuleKeys.LastStepId]?: string;
+    [ModuleKeys.ItemIds]?: string[];
 }
 export declare enum ModuleItemKeys {
     CoachNote = "coachNote",

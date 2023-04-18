@@ -16,6 +16,7 @@ export enum ModuleKeys {
   WelcomeMessage = 'welcomeMessage',
   NextKickoffDate = 'nextKickoffDate',
   LastStepId = 'lastStepId',
+  ItemIds = 'itemIds',
 }
 
 export interface Module {
@@ -46,6 +47,7 @@ export interface Module {
   }[];
   [ModuleKeys.NextKickoffDate]: FirebaseFirestore.Timestamp;
   [ModuleKeys.LastStepId]?: string;
+  [ModuleKeys.ItemIds]?: string[];
 }
 
 export enum ModuleItemKeys {
